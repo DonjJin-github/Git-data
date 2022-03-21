@@ -1,55 +1,55 @@
 #include <stdio.h>
 int main()
 {
-int i; //intÇü º¯¼ö i ¼±¾ğ
-int *ptr; //intÇü Æ÷ÀÎÅÍ º¯¼ö ptr ¼±¾ğ 
-int **dptr; //intÇü ÀÌÁß Æ÷ÀÎÅÍ º¯¼ö dptr ¼±¾ğ
-i = 1234; //i¿¡ Á¤¼ö 1234 ÀúÀå
-printf("[----- [Your Name] [Student ID] -----]\n"); //""¾ÈÀÇ ³»¿ë Ãâ·Â
-printf("\tÃÖµ¿Áø\t    2019038016\t\n\n");           //""ÀÇ ³»¿ëÀÎ ÀÌ¸§, ÇĞ¹ø Ãâ·Â
+int i; //intí˜• ë³€ìˆ˜ i ì„ ì–¸
+int *ptr; //intí˜• í¬ì¸í„° ë³€ìˆ˜ ptr ì„ ì–¸ 
+int **dptr; //intí˜• ì´ì¤‘ í¬ì¸í„° ë³€ìˆ˜ dptr ì„ ì–¸
+i = 1234; //iì— ì •ìˆ˜ 1234 ì €ì¥
+printf("[----- [Your Name] [Student ID] -----]\n"); //""ì•ˆì˜ ë‚´ìš© ì¶œë ¥
+printf("\tìµœë™ì§„\t    2019038016\t\n\n");           //""ì˜ ë‚´ìš©ì¸ ì´ë¦„, í•™ë²ˆ ì¶œë ¥
 
-//ptr = &iÀÌÀü 
-printf("[checking values before ptr = &i] \n"); //""¾ÈÀÇ ³»¿ë Ãâ·Â
-printf("value of i == %d\n", i); //iÀÇ °ª 10Áø¼ö·Î Ãâ·Â 
-printf("address of i == %p\n", &i); //iÀÇ ÁÖ¼Ò°ª 16Áø¼ö·Î Ãâ·Â
-printf("value of ptr == %p\n", ptr); //prtÀÇ °ª 16Áø¼ö·Î Ãâ·Â
-printf("address of ptr == %p\n", &ptr); //ptrÀÇ ÁÖ¼Ò°¡ °¡¸®Å°´Â °ª 10Áø¼ö·Î Ãâ·Â(=¾²·¹±â°ª)
+//ptr = &iì´ì „ 
+printf("[checking values before ptr = &i] \n"); //""ì•ˆì˜ ë‚´ìš© ì¶œë ¥
+printf("value of i == %d\n", i); //iì˜ ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥ 
+printf("address of i == %p\n", &i); //iì˜ ì£¼ì†Œê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of ptr == %p\n", ptr); //prtì˜ ê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("address of ptr == %p\n", &ptr); //ptrì˜ ì£¼ì†Œë¥¼ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
 
 ptr = &i; /* ptr is now holding the address of i */
-//ptr = &i ÀÌÈÄ
-printf("\n[checking values after ptr = &i] \n"); //""¾ÈÀÇ ³»¿ë Ãâ·Â
-printf("value of i == %d\n", i); //iÀÇ °ª 10Áø¼ö·Î Ãâ·Â
-printf("address of i == %p\n", &i); //iÀÇ ÁÖ¼Ò°ª 16Áø¼ö·Î Ãâ·Â
-printf("value of ptr == %p\n", ptr); //prtÀÇ °ª 16Áø¼ö·Î Ãâ·Â (=iÀÇ ÁÖ¼Ò°ª)
-printf("address of ptr == %p\n", &ptr); //ptrÀÇ ÁÖ¼Ò°ª 16Áø¼ö·Î Ãâ·Â
-printf("value of *ptr == %d\n", *ptr); //ptrÀÇ ÁÖ¼Ò°¡ °¡¸®Å°´Â °ª 10Áø¼ö·Î Ãâ·Â(=iÀÇ °ª)
+//ptr = &i ì´í›„
+printf("\n[checking values after ptr = &i] \n"); //""ì•ˆì˜ ë‚´ìš© ì¶œë ¥
+printf("value of i == %d\n", i); //iì˜ ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("address of i == %p\n", &i); //iì˜ ì£¼ì†Œê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of ptr == %p\n", ptr); //prtì˜ ê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥ (=iì˜ ì£¼ì†Œê°’)
+printf("address of ptr == %p\n", &ptr); //ptrì˜ ì£¼ì†Œê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of *ptr == %d\n", *ptr); //ptrì˜ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥(=iì˜ ê°’)
 
 dptr = &ptr; /* dptr is now holding the address of ptr */
-//dptr = %ptr ÀÌÈÄ
-printf("\n[checking values after dptr = &ptr] \n"); //""¾ÈÀÇ ³»¿ë Ãâ·Â
-printf("value of i == %d\n", i); //iÀÇ °ª 10Áø¼ö·Î Ãâ·Â
-printf("address of i == %p\n", &i); //iÀÇ ÁÖ¼Ò°ª 16Áø¼ö·Î Ãâ·Â
-printf("value of ptr == %p\n", ptr); //prtÀÇ °ª 16Áø¼ö·Î Ãâ·Â (=iÀÇ ÁÖ¼Ò°ª)
-printf("address of ptr == %p\n", &ptr); //ptrÀÇ ÁÖ¼Ò°ª 16Áø¼ö·Î Ãâ·Â
-printf("value of *ptr == %d\n", *ptr); //ptrÀÇ ÁÖ¼Ò°¡ °¡¸®Å°´Â °ª 10Áø¼ö·Î Ãâ·Â (=iÀÇ °ª)
-printf("value of dptr == %p\n", dptr); //dptrÀÇ °ª 16Áø¼ö·Î Ãâ·Â (=ptrÀÇ ÁÖ¼Ò°ª)
-printf("address of dptr == %p\n", &dptr); //dptrÀÇ ÁÖ¼Ò°ª 16Áø¼ö·Î Ãâ·Â
-printf("value of *dptr == %p\n", *dptr); //dptrÀÌ °¡¸®Å°´Â °ª 16Áø¼ö·Î Ãâ·Â (=ptrÀÇ °ª)
-printf("value of **dptr == %d\n", **dptr); //dptrÀÌ °¡¸®Å°´Â°ª(ptrÀÇ°ª)ÀÇ °¡¸®Å°´Â°ª Ãâ·Â (=iÀÇ °ª)
+//dptr = %ptr ì´í›„
+printf("\n[checking values after dptr = &ptr] \n"); //""ì•ˆì˜ ë‚´ìš© ì¶œë ¥
+printf("value of i == %d\n", i); //iì˜ ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("address of i == %p\n", &i); //iì˜ ì£¼ì†Œê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of ptr == %p\n", ptr); //prtì˜ ê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥ (=iì˜ ì£¼ì†Œê°’)
+printf("address of ptr == %p\n", &ptr); //ptrì˜ ì£¼ì†Œê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of *ptr == %d\n", *ptr); //ptrì˜ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥ (=iì˜ ê°’)
+printf("value of dptr == %p\n", dptr); //dptrì˜ ê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥ (=ptrì˜ ì£¼ì†Œê°’)
+printf("address of dptr == %p\n", &dptr); //dptrì˜ ì£¼ì†Œê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of *dptr == %p\n", *dptr); //dptrì´ ê°€ë¦¬í‚¤ëŠ” ê°’ 16ì§„ìˆ˜ë¡œ ì¶œë ¥ (=ptrì˜ ê°’)
+printf("value of **dptr == %d\n", **dptr); //dptrì´ ê°€ë¦¬í‚¤ëŠ”ê°’(ptrì˜ê°’)ì˜ ê°€ë¦¬í‚¤ëŠ”ê°’ ì¶œë ¥ (=iì˜ ê°’)
 
 *ptr = 7777; /* changing the value of *ptr */
-//*ptr = 7777 ÀÌÈÄ
-printf("\n[after *ptr = 7777] \n"); //""¾ÈÀÇ ³»¿ë Ãâ·Â
-printf("value of i == %d\n", i); //iÀÇ °ª 10Áø¼ö·Î Ãâ·Â
-printf("value of *ptr == %d\n", *ptr); //ptrÀÇ ÁÖ¼Ò°¡ °¡¸®Å°´Â °ª 10Áø¼ö·Î Ãâ·Â (=iÀÇ °ª)
-printf("value of **dptr == %d\n", **dptr); //dptrÀÌ °¡¸®Å°´Â°ª(ptrÀÇ°ª)ÀÇ °¡¸®Å°´Â°ª Ãâ·Â (=iÀÇ °ª)
+//*ptr = 7777 ì´í›„
+printf("\n[after *ptr = 7777] \n"); //""ì•ˆì˜ ë‚´ìš© ì¶œë ¥
+printf("value of i == %d\n", i); //iì˜ ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of *ptr == %d\n", *ptr); //ptrì˜ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥ (=iì˜ ê°’)
+printf("value of **dptr == %d\n", **dptr); //dptrì´ ê°€ë¦¬í‚¤ëŠ”ê°’(ptrì˜ê°’)ì˜ ê°€ë¦¬í‚¤ëŠ”ê°’ ì¶œë ¥ (=iì˜ ê°’)
 
 **dptr = 8888; /* changing the value of **dptr */
-//*ptr = 8888 ÀÌÈÄ
-printf("\n[after **dptr = 8888] \n"); //""¾ÈÀÇ ³»¿ë Ãâ·Â
-printf("value of i == %d\n", i); //iÀÇ °ª 10Áø¼ö·Î Ãâ·Â
-printf("value of *ptr == %d\n", *ptr); //ptrÀÇ ÁÖ¼Ò°¡ °¡¸®Å°´Â °ª 10Áø¼ö·Î Ãâ·Â (=iÀÇ °ª)
-printf("value of **dptr == %d\n", **dptr); //dptrÀÌ °¡¸®Å°´Â°ª(ptrÀÇ°ª)ÀÇ °¡¸®Å°´Â°ª Ãâ·Â (=iÀÇ °ª)
+//*ptr = 8888 ì´í›„
+printf("\n[after **dptr = 8888] \n"); //""ì•ˆì˜ ë‚´ìš© ì¶œë ¥
+printf("value of i == %d\n", i); //iì˜ ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥
+printf("value of *ptr == %d\n", *ptr); //ptrì˜ ì£¼ì†Œê°€ ê°€ë¦¬í‚¤ëŠ” ê°’ 10ì§„ìˆ˜ë¡œ ì¶œë ¥ (=iì˜ ê°’)
+printf("value of **dptr == %d\n", **dptr); //dptrì´ ê°€ë¦¬í‚¤ëŠ”ê°’(ptrì˜ê°’)ì˜ ê°€ë¦¬í‚¤ëŠ”ê°’ ì¶œë ¥ (=iì˜ ê°’)
 
 return 0;
 }
